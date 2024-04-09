@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "hangul-checker"
+version = "0.1.0"
+description = "한글 맞춤법 검사기"
+authors = ["kij <8bithermitcrab@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cachetools = "^5.3.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
