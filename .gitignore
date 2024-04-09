@@ -1,6 +1,3 @@
-# py-hanspell 모듈
-hanspell/
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
