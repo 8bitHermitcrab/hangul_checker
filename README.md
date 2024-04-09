@@ -12,7 +12,8 @@
 - Windows : ```.exe```
 
 ### pyinstaller 빌드 명령어
-- ```pyinstaller -i icon.icns -w -F hangul_checker.py```
+- MacOS : ```pyinstaller -i icon.icns -w -F hangul_checker.py```
+- Windows : ```pyinstaller -i icon.icns -w -F hangul_checker.py```
 - ```-i``` : 아이콘 설정
 - ```-w``` : 콘솔창이 보이지 않게 애플리케이션을 생성
 - ```-F``` : 하나의 파일로 패키징
