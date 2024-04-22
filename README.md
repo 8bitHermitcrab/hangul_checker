@@ -20,3 +20,6 @@
 
 ## hwpfile_checker 실행 방법
 ```python hwpfile_checker/hwpfile2.py [hwp파일명]```
+
+## pywin32 이슈
+- MacOS 운영체제 환경에서는 설치 및 사용할 수 없음.
