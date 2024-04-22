@@ -1,7 +1,7 @@
 import olefile
 import zlib
 import struct
-import binascii
+
 import re
 import unicodedata
 
@@ -77,24 +77,25 @@ class HWPExtractor(object):
 
             if rec_type in self.HWP_TEXT_TAGS:
                 rec_data = unpacked_data[i+4:i+4+rec_len]
-                text += rec_data.decode('utf-16')
+                # text += rec_data.decode('utf-16')
 
                 # 문자열을 담기 전 정제하기
-                # res = remove_control_characters(remove_chinese_characters(text))
-                # text += res
+                # control_txt = ['捤', '獥', '汤', '捯', '湰', '灧']
+                remov_control_txt = rec_data.decode('utf-16')
+                remov_control_txt = remov_control_txt.replace('捤', '')
+                remov_control_txt = remov_control_txt.replace('獥', '')
+                remov_control_txt = remov_control_txt.replace('汤', '')
+                remov_control_txt = remov_control_txt.replace('捯', '')
+                remov_control_txt = remov_control_txt.replace('湰', '')
+                remov_control_txt = remov_control_txt.replace('灧', '')
+                text += remov_control_txt
 
                 text += "\n"
 
             i += 4 + rec_len
 
         return text
-    
-    # 중국어 제거
-    def remove_chinese_characters(s: str):   
-        return re.sub(r'[\u4e00-\u9fff]+', '', s)
-    # 바이트 문자열 제거
-    def remove_control_characters(s):    
-        return "".join(ch for ch in s if unicodedata.category(ch)[0]!="C")
+
 
 def get_text(filename):
     hwp = HWPExtractor(filename) 

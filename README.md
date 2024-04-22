@@ -17,3 +17,6 @@
 - ```-i``` : 아이콘 설정
 - ```-w``` : 콘솔창이 보이지 않게 애플리케이션을 생성
 - ```-F``` : 하나의 파일로 패키징
+
+## hwpfile_checker 실행 방법
+```python hwpfile_checker/hwpfile2.py [hwp파일명]```
