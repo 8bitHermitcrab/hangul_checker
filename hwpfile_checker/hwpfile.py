@@ -2,9 +2,6 @@ import olefile
 import zlib
 import struct
 
-import re
-import unicodedata
-
 
 class HWPExtractor(object):
     FILE_HEADER_SECTION = "FileHeader"
