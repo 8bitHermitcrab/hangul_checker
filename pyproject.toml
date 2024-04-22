@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 cachetools = "^5.3.3"
+olefile = "^0.47"
 
 
 [build-system]
